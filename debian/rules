@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+PGSQL92VER = $(shell dpkg-query --showformat='$${Version}' --show postgresql-server-dev-9.2)
+
+override_dh_gencontrol:
+       echo "postgresql92:Version=$(PGSQL92VER)" > debian/substvars
+       dh_gencontrol -- -Tdebian/substvars
+
+%:
+       dh $@
+

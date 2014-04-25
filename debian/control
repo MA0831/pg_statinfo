@@ -1,0 +1,17 @@
+Source: pgstatsinfo-9.2
+Section: misc
+Priority: optional
+Maintainer: alexey.medvedchikov@gmail.com
+Build-Depends: debhelper (>= 7), postgresql-server-dev-9.2
+Standards-Version: 3.8.4
+Homepage: http://pgfoundry.org/projects/pgstatsinfo/
+
+Package: pgstatsinfo-9.2
+Architecture: any
+Depends: ${shlibs:Depends}, postgresql-9.2 (= ${postgresql92:Version}), ${misc:Depends}
+Description: pg_statsinfo monitors PostgreSQL server and snapshots info
+ pg_statsinfo monitors an instance of PostgreSQL server and gather
+ the statistics and activities of the server as snapshots.
+ .
+ Version PostgreSQL 9.2
+
